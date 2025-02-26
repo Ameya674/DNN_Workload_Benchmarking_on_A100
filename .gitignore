@@ -1,0 +1,5 @@
+*.nsys-rep
+*.ncu-rep
+*.sqlite
+*.stats
+requirements.txt
