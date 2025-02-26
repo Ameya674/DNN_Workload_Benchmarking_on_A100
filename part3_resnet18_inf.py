@@ -56,11 +56,11 @@ total_time = 0
 with torch.no_grad():
     # Run 100 time to remove any measurement/system overhead
     start_time = time.time()
-    for i in range(1):
+    for i in range(100):
         output = torch.nn.functional.softmax(resnet18(batch), dim=1)
     end_time = time.time()
 
-    total_time = (end_time - start_time) / 1
+    total_time = (end_time - start_time) / 100
 
 print(f"Inference time for batchsize {batch_size} of device {device}: {total_time}")
 
